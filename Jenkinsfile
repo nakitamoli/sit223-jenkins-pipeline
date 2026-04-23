@@ -4,15 +4,14 @@ pipeline {
     stages {
 
         stage('Build') {
-    steps {
-        echo '========== Stage 1: Build =========='
-        echo 'Task: Compiling and packaging the application source code.'
-        echo 'Tool: Maven'
-        echo 'Command that would be run: mvn clean package'
-        sleep(time: 30, unit: 'SECONDS')
-        echo 'Build complete. Artifact generated at target/app.jar'
-    }
-}
+            steps {
+                echo '========== Stage 1: Build =========='
+                echo 'Task: Compiling and packaging the application source code.'
+                echo 'Tool: Maven'
+                echo 'Command that would be run: mvn clean package'
+                sleep(time: 30, unit: 'SECONDS')
+                echo 'Build complete. Artifact generated at target/app.jar'
+            }
         }
 
         stage('Unit and Integration Tests') {
